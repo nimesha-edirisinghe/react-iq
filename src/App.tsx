@@ -1,3 +1,4 @@
+import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -10,7 +11,11 @@ const route = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={route} />;
+  return (
+    <ErrorBoundary>
+      <RouterProvider router={route} />
+    </ErrorBoundary>
+  );
 }
 
 export default App;

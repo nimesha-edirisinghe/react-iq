@@ -4,7 +4,6 @@ import { productData } from 'mocks/response';
 import Card from '../../components/Card/Card';
 import SearchSection from './SearchSection/SearchSection';
 import useDebounce from 'hooks/useDebounce';
-import { ProductI } from 'types/product';
 import Modal from 'components/Modal/Modal';
 import CardContent from './CardContent/CardContent';
 
@@ -75,7 +74,7 @@ const HomePage: FC = () => {
   const handleScroll = () => {
     if (
       window.innerHeight + document.documentElement.scrollTop >=
-        document.documentElement.offsetHeight + 15 &&
+        document.documentElement.offsetHeight - 4 &&
       !isLoading
     ) {
       loadProducts(page);

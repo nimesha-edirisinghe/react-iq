@@ -3,3 +3,9 @@
   width: 70vw;
   background-color: red;
 }
+
+.content__inner {
+  height: 50%;
+
+  background-color: black;
+}
